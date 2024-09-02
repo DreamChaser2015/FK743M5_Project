@@ -79,6 +79,14 @@ void lv_port_disp_init(void)
 
     /* Create the LVGL display object and the ST7789 LCD display driver */
     lcd_disp = lv_st7789_create(MY_DISP_HOR_RES, MY_DISP_VER_RES, LV_LCD_FLAG_NONE, lcd_send_cmd, lcd_send_color);
+    
+    // ST7789_INVON 颜色反转
+    {  
+        uint8_t para[] = {0x00};
+        uint8_t cmd = 0x21;
+        lcd_send_cmd(lcd_disp, &cmd, 1, 0, 0);
+    }
+    
     lv_display_set_rotation(lcd_disp, LV_DISPLAY_ROTATION_90);     /* set landscape orientation */
     
 
@@ -196,13 +204,6 @@ static void lcd_send_color(lv_display_t * disp, const uint8_t * cmd, size_t cmd_
     //    param[i + 1] ^= param[i];
     //    param[i] ^= param[i + 1];
     //}
-    
-    // TODO: 为什么要取反之后颜色是对的
-    for (uint16_t i = 0; i < param_size; i += 2)
-    {
-        param[i] ^= 0xFF;
-        param[i + 1] ^= 0xFF;
-    }
     
     while(lcd_bus_busy);    /* wait until previous transfer is finished */
     
