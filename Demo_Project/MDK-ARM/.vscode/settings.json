@@ -1,0 +1,29 @@
+{
+    "files.associations": {
+        "*.hpp": "cpp",
+        "*.py": "python",
+        "sdmmc.h": "c",
+        "user_sdram.h": "c",
+        "main.h": "c",
+        "quadspi.h": "c",
+        "self_inspection.h": "c",
+        "lcd_spi_200.h": "c",
+        "stdio.h": "c",
+        "st7789.h": "c",
+        "cmsis_os.h": "c",
+        "spi.h": "c",
+        "stm32h7xx_hal.h": "c",
+        "stm32h7xx_hal_conf.h": "c",
+        "stm32h7xx_hal_spi.h": "c",
+        "string": "c",
+        "iosfwd": "c",
+        "xlocale": "c",
+        "xstring": "c",
+        "debug.h": "c",
+        "cmsis_os2.h": "c",
+        "usart.h": "c",
+        "xutility": "c",
+        "fmc.h": "c",
+        "rtc.h": "c"
+    }
+}

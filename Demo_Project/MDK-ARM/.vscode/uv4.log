@@ -1,0 +1,11 @@
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Keil_arm\ARM\ARMCC\Bin'
+Build target 'h743_test'
+compiling st7789.c...
+..\user\st7789.c(247): warning:  #177-D: variable "orientation_str"  was declared but never referenced
+      const char *orientation_str[] = {
+..\user\st7789.c: 1 warning, 0 errors
+linking...
+Program Size: Code=228932 RO-data=19520 RW-data=384 ZI-data=108320  
+FromELF: creating hex file...
+"h743_test\h743_test.axf" - 0 Error(s), 1 Warning(s).
+Build Time Elapsed:  00:00:17
